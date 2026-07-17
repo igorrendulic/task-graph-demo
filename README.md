@@ -64,7 +64,7 @@ After a successful run, you can check out its feature branch to explore and
 review the implementation manually:
 
 ```bash
-git checkout task-graph-<plan-slug>-<run-id>/feature
+$task-graph checkout task-graph-<plan-slug>-<run-id>
 ```
 
 Use this branch to inspect the diff, run tests, and try the changes yourself.
