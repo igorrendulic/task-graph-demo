@@ -9,10 +9,17 @@ demo of that workflow.
 Task Graph is used from Codex. Start with an approved implementation plan,
 then send these prompts to Codex in order.
 
-### 1. Generate the task plan
+### Prerequisites
+
+Install Task Graph skill:
+```
+curl -fsSL https://raw.githubusercontent.com/igorrendulic/task-graph/main/install.sh | bash
+```
+
+### 1. Use existing plan to generate Task Graph artifacts
 
 ```
-Invoke `$task-graph tasks` to turn this approved implementation plan into Task Graph artifacts.
+Invoke `$task-graph tasks from docs/superpowers/plans/2026-07-17-persistent-bookmarks.md` to turn this approved implementation plan into Task Graph artifacts.
 ```
 
 This writes plan-specific files under `.agent/<plan-slug>/`:
@@ -33,7 +40,7 @@ Generating these artifacts plans the work only; it does not start execution.
 Commit any intended changes and ensure the checkout is clean. Then send:
 
 ```
-Invoke `$task-graph start` for `<plan-slug>` with up to 4 workers.
+Invoke `$task-graph start` for `<plan-slug>`. Number of workers is automatically selected based on the `dag.json`. (or just `$task-graph start` to use the current plan in context)
 ```
 
 Task Graph creates an isolated run and returns a command like:
