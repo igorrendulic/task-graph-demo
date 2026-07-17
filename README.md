@@ -16,10 +16,21 @@ Install Task Graph skill:
 curl -fsSL https://raw.githubusercontent.com/igorrendulic/task-graph/main/install.sh | bash
 ```
 
+Clone this repository:
+```
+git clone https://github.com/igorrendulic/task-graph-demo.git 
+```
+
+Start codex CLI:
+```
+codex
+```
+
 ### 1. Use existing plan to generate Task Graph artifacts
 
-```
-Invoke `$task-graph tasks from docs/superpowers/plans/2026-07-17-persistent-bookmarks.md` to turn this approved implementation plan into Task Graph artifacts.
+Invoke tasks to turn this approved implementation plan into Task Graph artifacts:
+```bash
+$task-graph tasks from docs/superpowers/plans/2026-07-17-persistent-bookmarks.md
 ```
 
 This writes plan-specific files under `.agent/<plan-slug>/`:
